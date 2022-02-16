@@ -496,6 +496,14 @@ jQuery('#totop').on( "click", function() {      // When arrow is clicked
 });
 
 
+$('.sliding-link').click(function(e) {
+    e.preventDefault();
+	var keyword = $(this).attr('ss');
+	var scrollTo = $('#' + keyword);
+	$('html, body').animate({
+		scrollTop: scrollTo.offset().top - 50
+	}, 'slow');
+});
 // ===== timer ==== //
 
 function getTimeRemaining(endtime) {
